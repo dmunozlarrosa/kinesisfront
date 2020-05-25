@@ -4,6 +4,7 @@ import { List, Divider } from 'semantic-ui-react'
 export default class ItemContent extends Component {
   render () {
     const pacient = this.props.pacient;
+    const labels = this.props.labels;
     return (        
         <List.Content>
           <List.Header fluid as='h3'>
@@ -12,8 +13,8 @@ export default class ItemContent extends Component {
           </List.Header>
           <List.Description fluid>
             <i>{pacient.contact.email}</i> <br></br>
-            <b>Trauma:</b> {pacient.trauma}<br></br>
-            <b>Motivo de consulta:</b> {pacient.background}
+            <b>{labels.trauma}:</b> {pacient.trauma}<br></br>
+            <b>{labels.background}:</b> {pacient.background}
           </List.Description>
         </List.Content>      
     )

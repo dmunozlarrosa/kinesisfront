@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import PacientListItem from './Item.component'
+import Item from './Item.component'
 import FilterPacient from './FilterPacient.component'
 import { List,Button, Input, Container } from 'semantic-ui-react'
 
@@ -19,6 +19,7 @@ class PacientList extends Component {
     const rows = []
     // const filterInput = this.props.filterInput.toLowerCase()
     let pacients = this.props.pacients
+    let labels= this.props.labels
     if (!pacients) return ''
     pacients.forEach(p => {
       let lowerName = p.contact.name.toLowerCase()
@@ -26,7 +27,10 @@ class PacientList extends Component {
       //   .replace(p.contact.name[0], p.contact.name[0].toUpperCase)
       if (lowerName.indexOf(    this.state.pacientFilterPacient.toLowerCase()) != -1 ||
           lowerLastName.indexOf(this.state.pacientFilterPacient.toLowerCase()) != -1 ) 
-          rows.push(<PacientListItem pacient={p} />)
+          rows.push(
+            <Item pacient = {p} 
+                  labels  = {labels}/>
+          );
     })
     return rows;
   }

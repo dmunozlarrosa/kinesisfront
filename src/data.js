@@ -1,5 +1,3 @@
-
-
 class Pacient {
     constructor (newPacient) {
         this._id = ""; 
@@ -23,6 +21,31 @@ class Pacient {
         this.picture          = newPacient.picture          ? newPacient.picture          : '-';
     }
 }
+
+class PacientLabels extends Pacient{
+    constructor(){
+        super({
+            contact : {
+                name : "Nombre",
+                lastname : "Apellido",
+                age : "Edad",
+                address : "Direccion",
+                phone : "Telefono",
+                email : "Email"
+            },
+            picture : "Foto de perfil",
+            sports : "Deporte",
+            background : "Antecedentes",
+            trauma : "Trauma",
+            surgery : "Cirugia",
+            disease : "Enfermedades",
+            reference : "Referencia",
+            reason : "Motivo de consulta",
+            evolution : "Evolucion"
+        });
+    }
+}
+
 var pacientData = [
     {
         contact : {
@@ -63,6 +86,7 @@ var pacientData = [
         evolution : ""
     }
 ]
-var pacientData = pacientData.map( x => new Pacient(x)); 
+const pacientData   = pacientData.map( x => new Pacient(x)); 
+const pacientLabels = new PacientLabels();
 
-export {pacientData};
+export {pacientData, pacientLabels};

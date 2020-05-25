@@ -18,16 +18,20 @@ class Item extends Component {
       <Modal trigger={
           <List.Item fluid>    
             <Image avatar size='tiny' src={pacient.picture} />
-            <ItemContent pacient={pacient}/> 
+            <ItemContent pacient={pacient}
+                         labels ={this.props.labels}/> 
           </List.Item>}>
         <Modal.Header> 
           <Header as='h2'>
-            <Image circular size = 'huge' src={pacient.picture} />
-            {pacient.contact.name} {pacient.contact.lastname} 
+            <Image circular src={pacient.picture}></Image>
+            <Header.Content>
+              {pacient.contact.name} {pacient.contact.lastname}
+              <Header.Subheader>{pacient.contact.age} años - {pacient.trauma} </Header.Subheader>       
+            </Header.Content>    
           </Header>
         </Modal.Header>
-        <ModalContent pacient = {pacient}></ModalContent>
-        <ModalContent pacient = {pacient}></ModalContent>
+        <ModalContent pacient = {pacient}
+                      labels  = {this.props.labels}></ModalContent>
       </Modal>
     )
   }

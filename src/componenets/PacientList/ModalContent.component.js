@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Modal, Image, Grid, Segment, Button, Icon, Divider } from 'semantic-ui-react'
+import { Modal, Image, Grid, Segment, Button, Icon, Divider, Label } from 'semantic-ui-react'
 export default class ModalContent extends Component {
     render() {
+        const labels = this.props.labels;
         const pacient = this.props.pacient;
         return (
             <Modal.Content image>
@@ -11,18 +12,18 @@ export default class ModalContent extends Component {
                         <Grid.Column width='8'>
                         <Segment compact basic>
                             <p>
-                            <span class="ui grey tiny header">Edad     </span><br/>{pacient.contact.age}   <br/>
+                            <span class="ui grey tiny header">{labels.contact.age}    </span><br/>{pacient.contact.age}<br/>
                             <Divider fitted/>
-                            <span class="ui grey tiny header">Direccion</span><br/>{pacient.contact.address}
+                            <span class="ui grey tiny header">{labels.contact.address}</span><br/>{pacient.contact.address}
                             </p>
                         </Segment>
                         </Grid.Column>
                         <Grid.Column width='8'>
                         <Segment compact basic>
                             <p>
-                            <span class="ui grey tiny header"> Telefono </span><br/>{pacient.contact.phone}<br/>
+                            <span class="ui grey tiny header">{labels.contact.phone}</span><br/>{pacient.contact.phone}<br/>
                             <Divider fitted/>
-                            <span class="ui grey tiny header"> Email    </span><br/>{pacient.contact.email}
+                            <span class="ui grey tiny header">{labels.contact.email}</span><br/>{pacient.contact.email}
                             </p>
                         </Segment>
                         </Grid.Column>

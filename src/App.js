@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PacientList from './componenets/PacientList/PacientList.component'
-import { pacientData } from './data'
+import { pacientData, pacientLabels } from './data'
 import UserComponent from './UserComponent'
 
 class App extends Component {
@@ -36,7 +36,8 @@ class App extends Component {
     var src = "https://react.semantic-ui.com/images/avatar/large/steve.jpg";
     return (
       <div className='App'>
-        <PacientList pacients={pacientData}> </PacientList>
+        <PacientList pacients={pacientData}
+                     labels  ={pacientLabels} > </PacientList>
       </div>
     )
   }
