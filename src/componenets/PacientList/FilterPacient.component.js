@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Input, Button } from 'semantic-ui-react'
 
-class FilterUser extends Component {
+class FilterPacient extends Component {
   render () {
     return (
         <Input fluid
@@ -9,7 +9,7 @@ class FilterUser extends Component {
                
                placeholder='Buscar paciente...'
                value={this.props.filter}
-               onChange = {this.props.handleFilterUser}>
+               onChange = {this.props.handleFilterPacient}>
                <input />
                <Button icon='search' color='gray'/>
                <Button icon='plus'   color='green'/>
@@ -18,4 +18,4 @@ class FilterUser extends Component {
   }
 }
 
-export default FilterUser;
+export default FilterPacient;

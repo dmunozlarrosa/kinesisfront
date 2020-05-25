@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
-// import {Col, Card} from 'semantic-ui-react';
-import { Image,Card, Divider} from 'semantic-ui-react'
-import PacientList from './componenets/PacientList.component'
+import PacientList from './componenets/PacientList/PacientList.component'
 import { pacientData } from './data'
 import UserComponent from './UserComponent'
 
@@ -9,9 +7,9 @@ class App extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      pacientFilterUser: ''
+      pacientFilterPacient: ''
     }
-    this.handleFilterUser = this.handleFilterUser.bind(this);
+    this.handleFilterPacient = this.handleFilterPacient.bind(this);
   }
 
   // componentDidMount () {
@@ -19,7 +17,7 @@ class App extends Component {
   //   this.setState({ pacientList: pacientData })
   // }
   
-  handleFilterUser(e){
+  handleFilterPacient(e){
     this.setState({filterText: e.target.value})
   }
 

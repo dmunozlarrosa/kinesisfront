@@ -1,18 +1,18 @@
 import React, { Component } from 'react'
-import PacientListCard from './PacientListCard.component'
-import FilterUser from './FilterUser.component'
+import PacientListItem from './Item.component'
+import FilterPacient from './FilterPacient.component'
 import { List,Button, Input, Container } from 'semantic-ui-react'
 
 class PacientList extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      pacientFilterUser: ''
+      pacientFilterPacient: ''
     }
-    this.handleFilterUser = this.handleFilterUser.bind(this);
+    this.handleFilterPacient = this.handleFilterPacient.bind(this);
   }
-  handleFilterUser(e){
-    this.setState({pacientFilterUser: e.target.value})
+  handleFilterPacient(e){
+    this.setState({pacientFilterPacient: e.target.value})
   }
 
   getPacientList () {
@@ -24,9 +24,9 @@ class PacientList extends Component {
       let lowerName = p.contact.name.toLowerCase()
       let lowerLastName = p.contact.lastname.toLowerCase()
       //   .replace(p.contact.name[0], p.contact.name[0].toUpperCase)
-      if (lowerName.indexOf(    this.state.pacientFilterUser.toLowerCase()) != -1 ||
-          lowerLastName.indexOf(this.state.pacientFilterUser.toLowerCase()) != -1 ) 
-          rows.push(<PacientListCard pacient={p} />)
+      if (lowerName.indexOf(    this.state.pacientFilterPacient.toLowerCase()) != -1 ||
+          lowerLastName.indexOf(this.state.pacientFilterPacient.toLowerCase()) != -1 ) 
+          rows.push(<PacientListItem pacient={p} />)
     })
     return rows;
   }
@@ -35,8 +35,8 @@ class PacientList extends Component {
     let pacientList = this.getPacientList()
     return (
       <Container text style={{ marginTop: '7em' }}>
-        <FilterUser filter           = {this.state.pacientFilterUser}
-                    handleFilterUser = {this.handleFilterUser}/>
+        <FilterPacient filter           = {this.state.pacientFilterPacient}
+                    handleFilterPacient = {this.handleFilterPacient}/>
         
         <List divided relaxed>
           {pacientList}
