@@ -4,21 +4,21 @@ class Pacient {
         for(let i=0; i<10; i++) 
             this._id = this._id.concat(Math.floor( Math.random() * 36).toString(36).toString());
         this.contact     = {}; 
-        this.contact.name     = newPacient.contact.name     ? newPacient.contact.name     : '-'; //requeried
-        this.contact.lastname = newPacient.contact.lastname ? newPacient.contact.lastname : '-'; //requeried
-        this.contact.age      = newPacient.contact.age      ? newPacient.contact.age      : '-'; //requeried
-        this.contact.address  = newPacient.contact.address  ? newPacient.contact.address  : '-'; 
-        this.contact.phone    = newPacient.contact.phone    ? newPacient.contact.phone    : '-'; //requeried
-        this.contact.email    = newPacient.contact.email    ? newPacient.contact.email    : '-'; 
-        this.sports           = newPacient.sports           ? newPacient.sports           : '-';
-        this.background       = newPacient.background       ? newPacient.background       : '-';
-        this.trauma           = newPacient.trauma           ? newPacient.trauma           : '-';
-        this.surgery          = newPacient.surgery          ? newPacient.surgery          : '-';
-        this.disease          = newPacient.disease          ? newPacient.disease          : '-';
-        this.reference        = newPacient.reference        ? newPacient.reference        : '-';
-        this.reason           = newPacient.reason           ? newPacient.reason           : '-';
-        this.evolution        = newPacient.evolution        ? newPacient.evolution        : '-';
-        this.picture          = newPacient.picture          ? newPacient.picture          : '-';
+        this.contact.name      = newPacient.contact.name      ? newPacient.contact.name      : '-'; //requeried
+        this.contact.lastname  = newPacient.contact.lastname  ? newPacient.contact.lastname  : '-'; //requeried
+        this.contact.age       = newPacient.contact.age       ? newPacient.contact.age       : '-'; //requeried
+        this.contact.address   = newPacient.contact.address   ? newPacient.contact.address   : '-'; 
+        this.contact.phone     = newPacient.contact.phone     ? newPacient.contact.phone     : '-'; //requeried
+        this.contact.email     = newPacient.contact.email     ? newPacient.contact.email     : '-'; 
+        this.contact.reference = newPacient.contact.reference ? newPacient.contact.reference : '-';
+        this.sports            = newPacient.sports            ? newPacient.sports            : '-';
+        this.background        = newPacient.background        ? newPacient.background        : '-';
+        this.trauma            = newPacient.trauma            ? newPacient.trauma            : '-';
+        this.surgery           = newPacient.surgery           ? newPacient.surgery           : '-';
+        this.disease           = newPacient.disease           ? newPacient.disease           : '-';
+        this.reason            = newPacient.reason            ? newPacient.reason            : '-';
+        this.evolution         = newPacient.evolution         ? newPacient.evolution         : '-';
+        this.picture           = newPacient.picture           ? newPacient.picture           : '-';
     }
 }
 
@@ -31,7 +31,8 @@ class PacientLabels extends Pacient{
                 age : "Edad",
                 address : "Direccion",
                 phone : "Telefono",
-                email : "Email"
+                email : "Email",
+                reference : "Referencia"
             },
             picture : "Foto de perfil",
             sports : "Deporte",
@@ -39,7 +40,6 @@ class PacientLabels extends Pacient{
             trauma : "Trauma",
             surgery : "Cirugia",
             disease : "Enfermedades",
-            reference : "Referencia",
             reason : "Motivo de consulta",
             evolution : "Evolucion"
         });
@@ -54,7 +54,8 @@ var pacientData = [
             age : "31",
             address : "Nogoya 392",
             phone : "0343461289584",
-            email : "agus_perrea@gmail.com"
+            email : "agus_perrea@gmail.com",
+            reference : "David Muñoz"
         },
         picture : "https://react.semantic-ui.com/images/avatar/large/molly.png",
         sports : "danza intergalatica",
@@ -62,7 +63,6 @@ var pacientData = [
         trauma : "dedingitis",
         surgery : "no presenta",
         disease : "",
-        reference : "David Muñoz",
         reason : "golpe con puerta de auto",
         evolution : ""
     },
@@ -73,7 +73,8 @@ var pacientData = [
             age : "31",
             address : "Nogoya 392",
             phone : "0343461289584",
-            email : "tarambaneitor@gmail.com"
+            email : "tarambaneitor@gmail.com",
+            reference : ""
         },     
         picture : "https://react.semantic-ui.com/images/avatar/large/steve.jpg",
         sports : "escalada espacial",
@@ -81,7 +82,6 @@ var pacientData = [
         trauma : "recuperacion movilidad",
         surgery : "no presenta",
         disease : "",
-        reference : "",
         reason : "mejorar movilidad",
         evolution : ""
     }
