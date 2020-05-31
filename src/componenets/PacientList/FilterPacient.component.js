@@ -12,7 +12,7 @@ class FilterPacient extends Component {
                onChange = {this.props.handleFilterPacient}>
                <input />
                <Button icon='search' color='gray'/>
-               <Button icon='plus'   color='green'/>
+               <Button icon='user plus'   color='green'/>
         </Input>       
     )
   }

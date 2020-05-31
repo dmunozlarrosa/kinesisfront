@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Item from './Item.component'
 import FilterPacient from './FilterPacient.component'
-import { List,Button, Input, Container } from 'semantic-ui-react'
+import { List, Container } from 'semantic-ui-react'
 
 class PacientList extends Component {
   constructor (props) {

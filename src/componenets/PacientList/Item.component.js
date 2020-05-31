@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import ItemContent from './ItemContent.component'
-import ModalContent from './ModalContent.component'
+import PacientModal from './Modal/PacientModal.component'
 import { List,  Image,  Modal, Header} from 'semantic-ui-react'
 
 class Item extends Component {
@@ -30,8 +30,8 @@ class Item extends Component {
             </Header.Content>    
           </Header>
         </Modal.Header>
-        <ModalContent pacient = {pacient}
-                      labels  = {this.props.labels}></ModalContent>
+        <PacientModal pacient = {pacient}
+                      labels  = {this.props.labels}></PacientModal>
       </Modal>
     )
   }
