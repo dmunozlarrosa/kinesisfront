@@ -6,13 +6,12 @@ class FilterPacient extends Component {
     return (
         <Input fluid
                action={{ icon: 'search' }} 
-               
                placeholder='Buscar paciente...'
                value={this.props.filter}
                onChange = {this.props.handleFilterPacient}>
-               <input />
-               <Button icon='search' color='gray'/>
-               <Button icon='user plus'   color='green'/>
+              <input />
+                    <Button icon='search'/>
+                    <Button icon='user plus'   color='green'/>
         </Input>       
     )
   }

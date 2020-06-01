@@ -16,7 +16,7 @@ class Item extends Component {
     const pacient = this.props.pacient
     return (
       <Modal trigger={
-          <List.Item fluid>    
+          <List.Item>    
             <Image avatar size='tiny' src={pacient.picture} />
             <ItemContent pacient={pacient}
                          labels ={this.props.labels}/> 

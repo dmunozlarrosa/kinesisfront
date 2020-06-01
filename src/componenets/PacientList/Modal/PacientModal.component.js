@@ -40,14 +40,15 @@ export default class PacientModal extends Component {
         const acordionFichaKinesica = this.getAcordionObject("child","Ficha Kinesica",1)
         return (
             <Modal.Content image>
-                <Accordion fluid >
+                <Accordion fluid exclusive={false} defaultActiveIndex={[0, 1]} >
                     {acordionDatosPersonales}
                     <Accordion.Content active={activeIndex === 0}>
-                        <DatosPersonales pacient = {this.props.pacient} labels  = {this.props.labels}/>
+                        <DatosPersonales pacient = {this.props.pacient} 
+                                         labels = {this.props.labels}/>
                     </Accordion.Content>
                     {acordionFichaKinesica}
                     <Accordion.Content active={activeIndex === 1}>
-                        <FichaKinesica ficha={this.props.ficha}/>
+                        <FichaKinesica ficha={this.props.pacient.ficha} />
                     </Accordion.Content>
                     <Button.Group floated='right'>
                         <Button basic color='green'>

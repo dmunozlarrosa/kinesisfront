@@ -24,11 +24,11 @@ class PacientList extends Component {
     pacients.forEach(p => {
       let lowerName = p.contact.name.toLowerCase()
       let lowerLastName = p.contact.lastname.toLowerCase()
-      //   .replace(p.contact.name[0], p.contact.name[0].toUpperCase)
-      if (lowerName.indexOf(    this.state.pacientFilterPacient.toLowerCase()) != -1 ||
-          lowerLastName.indexOf(this.state.pacientFilterPacient.toLowerCase()) != -1 ) 
+      if (lowerName.indexOf(    this.state.pacientFilterPacient.toLowerCase()) !== -1 ||
+          lowerLastName.indexOf(this.state.pacientFilterPacient.toLowerCase()) !== -1 ) 
           rows.push(
-            <Item pacient = {p} 
+            <Item key = {p._id.toString()}
+                  pacient = {p}
                   labels  = {labels}/>
           );
     })
@@ -41,7 +41,6 @@ class PacientList extends Component {
       <Container text style={{ marginTop: '7em' }}>
         <FilterPacient filter           = {this.state.pacientFilterPacient}
                     handleFilterPacient = {this.handleFilterPacient}/>
-        
         <List divided relaxed>
           {pacientList}
         </List>

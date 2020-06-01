@@ -33,8 +33,9 @@ function getFilteredObject(data, ...args) {
   let dataFiltered = {}
   Object.keys(data).filter(function (x){
       let value = true;
-      args.forEach(a => value = a == x ? false : value ) 
+      args.forEach(a => value = a === x ? false : value ) 
       if (value) return x;
+      return false;
   }).forEach(function(x){  
     dataFiltered[x] = data[x] 
   }) 

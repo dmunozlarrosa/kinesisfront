@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import PacientList from './componenets/PacientList/PacientList.component'
-import { pacientData, pacientLabels } from './data'
-import UserComponent from './UserComponent'
+import { pacientData, pacientLabels } from './Data/data'
 
 class App extends Component {
   constructor (props) {
@@ -33,21 +32,13 @@ class App extends Component {
   // }
 
   render () {
-    var src = "https://react.semantic-ui.com/images/avatar/large/steve.jpg";
     return (
       <div className='App'>
         <PacientList pacients={pacientData}
-                     labels  ={pacientLabels} > </PacientList>
+                     labels  ={pacientLabels} />
       </div>
     )
   }
 }
 
 export default App
-// <Col m={12} s={14}>
-// <Card className='blue-grey darken-1' textClassName='white-text' title='Card title' actions={[<a href='#'>This is a link</a>]}>
-//   {this.state.pacientList.map(item => (
-//      <UserComponent user = {item}/>
-//   ))}
-// </Card>
-// </Col>

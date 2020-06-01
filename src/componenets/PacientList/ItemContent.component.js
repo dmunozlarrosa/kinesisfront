@@ -7,11 +7,11 @@ export default class ItemContent extends Component {
     const labels = this.props.labels;
     return (        
         <List.Content>
-          <List.Header fluid as='h3'>
+          <List.Header as='h3'>
             {pacient.contact.lastname} {pacient.contact.name}
             <Divider fitted hidden />
           </List.Header>
-          <List.Description fluid>
+          <List.Description>
             <i>{pacient.contact.email}</i> <br></br>
             <b>{labels.trauma}:</b> {pacient.trauma}<br></br>
             <b>{labels.background}:</b> {pacient.background}

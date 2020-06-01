@@ -26,8 +26,8 @@ export default class DatosPersonales extends Component {
     }
 
     render() {
-        let pacientData    = getFilteredObject(this.props.pacient, "_id",  "contact",   "picture"); 
-        let pacientLabels  = getFilteredObject(this.props.labels, "_id",  "contact",   "picture"); 
+        let pacientData    = getFilteredObject(this.props.pacient, "_id",  "contact",   "picture", "ficha" ); 
+        let pacientLabels  = getFilteredObject(this.props.labels, "_id",  "contact",   "picture", "ficha"); 
         let pacientsMatrix = chunkifyObject(pacientData  , 2);
         let labelsMatrix   = chunkifyObject(pacientLabels, 2);
         let tableRows = [];
